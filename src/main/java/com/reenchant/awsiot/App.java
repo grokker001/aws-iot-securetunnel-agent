@@ -88,7 +88,6 @@ public class App {
         public void onMessage(AWSIotMessage message) {
             try {
                 // Deserialize the MQTT message
-                System.out.println("++++got MQTT msg: " + message.getStringPayload());
                 final JSONObject json = new JSONObject(message.getStringPayload());
 
                 final String accessToken = json.getString("clientAccessToken");
